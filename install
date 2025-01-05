@@ -14,7 +14,7 @@ echo "Decompressing Rootfs...!!!"
 proot --link2symlink bsdtar -xpJf ubuntu-arm64.tar.xz 2>/dev/null
 
 ### Make executable bin
-wget -O $PREFIX/bin/ubuntu 
+wget -O $PREFIX/bin/ubuntu https://raw.githubusercontent.com/xiv3r/Ubuntu-Termux/refs/heads/main/bin/ubuntu
 
 ### Fix shebang
 termux-fix-shebang $PREFIX/bin/ubuntu 
