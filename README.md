@@ -13,11 +13,3 @@ ubuntu
 ```
 exit
 ```
-
-# Install BackBox
-```
-ubuntu
-```
-```
-
-```
