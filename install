@@ -7,7 +7,7 @@ pkg install root-repo x11-repo axel bsdtar proot xz-utils neofetch pulseaudio -y
 neofetch --ascii_distro Ubuntu -L
 
 ### Download Tarball
-axel -a --search -o ubuntu-arm64.tar.xz https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-jammy-arm-pd-v4.11.0.tar.xz
+axel -a --search -o ubuntu-arm64.tar.xz https://github.com/termux/proot-distro/releases/download/v4.11.0/ubuntu-jammy-aarch64-pd-v4.11.0.tar.xz
 
 ### Decompressed tarball
 echo "Decompressing Rootfs...!!!"
