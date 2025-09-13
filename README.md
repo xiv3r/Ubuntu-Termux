@@ -1,9 +1,6 @@
-# Ubuntu-Termux
-Ubuntu in Termux
-
 # Auto Install
 ```
-apt update && apt install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Ubuntu-Termux/refs/heads/main/install | sh && ubuntu
+apt update && pkg install wget -y && wget -qO- https://raw.githubusercontent.com/xiv3r/Ubuntu-Termux/refs/heads/main/install | sh && clear && ubuntu
 ```
 # Login
 ```
