@@ -21,7 +21,8 @@ jobs:
       run: |
         mkdir -p downloads
         cd downloads
-        wget https://cdimage.ubuntu.com/ubuntu-base/releases/25.10/release/ubuntu-base-25.10-base-arm64.tar.gz
+        wget https://github.com/termux/proot-distro/releases/download/v4.30.1/ubuntu-questing-aarch64-pd-v4.30.1.tar.xz
+        # wget https://cdimage.ubuntu.com/ubuntu-base/releases/25.10/release/ubuntu-base-25.10-base-arm64.tar.gz
         
     - name: Determine release tag
       id: get_tag
