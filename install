@@ -6,7 +6,7 @@ cd "$HOME"
 pkg install fastfetch root-repo x11-repo axel bsdtar proot xz-utils neofetch pulseaudio -y
 
 ### Ascii
-fastfetch Ubuntu
+fastfetch --logo ubuntu
 
 ### Download Tarball
 axel -o ubuntu-arm64.tar.xz https://github.com/xiv3r/Ubuntu-Termux/releases/download/ubuntu/ubuntu-questing-aarch64-pd-v4.30.1.tar.xz
