@@ -1,12 +1,12 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-cd $HOME
+cd "$HOME"
 
 ### install dependencies 
-pkg install root-repo x11-repo axel bsdtar proot xz-utils neofetch pulseaudio -y
+pkg install fastfetch root-repo x11-repo axel bsdtar proot xz-utils neofetch pulseaudio -y
 
 ### Ascii
-neofetch --ascii_distro Ubuntu
+fastfetch Ubuntu
 
 ### Download Tarball
 axel -o ubuntu-arm64.tar.xz https://github.com/xiv3r/Ubuntu-Termux/releases/download/ubuntu/ubuntu-questing-aarch64-pd-v4.30.1.tar.xz
@@ -15,8 +15,12 @@ axel -o ubuntu-arm64.tar.xz https://github.com/xiv3r/Ubuntu-Termux/releases/down
 echo "Decompressing Rootfs...!!!"
 proot --link2symlink bsdtar -xpJf ubuntu-arm64.tar.xz 2>/dev/null
 
+### Migrate system
+mkdir -p ubuntu-arm64
+mv ubuntu-questing-aarch64/* ubuntu-arm64
+
 ### Move rootfs
-mv ubuntu*/* ubuntu-arm64/
+### mv ubuntu*/* ubuntu-arm64/
 
 ### Make executable bin
 wget -qO $PREFIX/bin/ubuntu https://raw.githubusercontent.com/xiv3r/Ubuntu-Termux/refs/heads/main/bin/ubuntu
@@ -24,4 +28,5 @@ wget -qO $PREFIX/bin/ubuntu https://raw.githubusercontent.com/xiv3r/Ubuntu-Termu
 ### Fix shebang
 termux-fix-shebang $PREFIX/bin/ubuntu 
 chmod 755 $PREFIX/bin/ubuntu 
+
 ubuntu 
